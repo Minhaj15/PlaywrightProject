@@ -1,0 +1,26 @@
+{
+  "name": "playwrightproject",
+  "version": "1.0.0",
+  "description": "Automated software testing with playwright",
+  "main": "index.js",
+  "scripts": {
+    "tests:chrome": "playwright test --config=playwright.config.ts --project=Chromium --reporter=list",
+    "tests:firefox": "playwright test --config=playwright.config.ts --project=Firefox --reporter=list",
+    "tests:webkit": "playwright test --config=playwright.config.ts --project=Webkit --reporter=list",
+    "tests:e2e": "playwright test --config=e2e.config.ts --project=Chromium --reporter=list",
+    "tests:visual:chrome": "playwright test --config=visual.config.ts --project=Chromium",
+    "tests:visual:firefox": "playwright test --config=visual.config.ts --project=Firefox",
+    "tests:visual:webkit": "playwright test --config=visual.config.ts --project=Webkit",
+    "tests:visual:chrome:update": "playwright test --config=visual.config.ts --project=Chromium --update-snapshots",
+    "tests:visual:firefox:update": "playwright test --config=visual.config.ts --project=Firefox --update-snapshots",
+    "tests:visual:webkit:update": "playwright test --config=visual.config.ts --project=Webkit --update-snapshots",
+    "tests:api" : "playwright test --config=api.config.ts --project=Chromium --reporter=list",
+    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java"
+  },
+  "author": "Minhaj Mohd",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.21.1",
+    "prettier": "^2.6.2"
+  }
+}
